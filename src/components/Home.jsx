@@ -1,18 +1,19 @@
 import React from "react";
-import Header from "./partials";
-import Hero from "./partials";
-import Auction from "./partials";
-import Partners from "./partials";
-import Footer from "./partials";
+// import Header from "../components/partials";
+// import Hero from "./partials";
+// import Auction from "./partials";
+// import Partners from "./partials";
+// import Footer from "./partials";
 
-function Home() {
+export default function Home() {
   return (
     <>
-      <Header />
-      <Hero />
+      <h1>Hello</h1>
+      {/* <Header /> */}
+      {/* <Hero />
       <Auction />
       <Partners />
-      <Footer />
+      <Footer /> */}
     </>
   );
 }
