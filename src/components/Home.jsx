@@ -1,5 +1,5 @@
 import React from "react";
-// import Header from "../components/partials";
+import Header from "./partials/Header";
 // import Hero from "./partials";
 // import Auction from "./partials";
 // import Partners from "./partials";
@@ -8,8 +8,7 @@ import React from "react";
 export default function Home() {
   return (
     <>
-      <h1>Hello</h1>
-      {/* <Header /> */}
+      <Header />
       {/* <Hero />
       <Auction />
       <Partners />
