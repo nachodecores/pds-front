@@ -77,6 +77,27 @@ export default function Signup() {
           <Form.Control type="email" placeholder="Correo electrónico" />
         </FloatingLabel>
 
+        <Row>
+          <Col>
+            <FloatingLabel
+              controlId="floatingInput"
+              label="Razón Social"
+              className="mb-3"
+            >
+              <Form.Control type="text" placeholder="Razón Social" />
+            </FloatingLabel>
+          </Col>
+          <Col>
+            <FloatingLabel
+              controlId="floatingInput"
+              label="RUC"
+              className="mb-3"
+            >
+              <Form.Control type="text" placeholder="RUC" />
+            </FloatingLabel>
+          </Col>
+        </Row>
+
         <FloatingLabel
           controlId="floatingInput"
           label="Cédula de identidad"
@@ -91,6 +112,14 @@ export default function Signup() {
           className="mb-3"
         >
           <Form.Control type="text" placeholder="DICOSE" />
+        </FloatingLabel>
+
+        <FloatingLabel
+          controlId="floatingInput"
+          label="Escritorio de confianza"
+          className="mb-3"
+        >
+          <Form.Control type="text" placeholder="Escritorio de confianza" />
         </FloatingLabel>
 
         <FloatingLabel
@@ -116,8 +145,8 @@ export default function Signup() {
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
-          Submit
+        <Button variant="primary" type="submit" className="mb-3">
+          Registrarse
         </Button>
       </Form>
     </>
