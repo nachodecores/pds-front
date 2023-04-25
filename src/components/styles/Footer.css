@@ -1,6 +1,6 @@
-.header {
+.footer {
   position: sticky;
-  top: 0;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,7 +10,7 @@
   z-index: 3;
 }
 
-.header a {
+.footer a {
   color: #fffff5;
   font-family: "Mulish";
   margin: 0 50px;
@@ -18,7 +18,7 @@
   padding: 2px 15px;
 }
 
-.header a:hover {
+.footer a:hover {
   text-decoration: none;
   color: #0e4056;
   background-color: #fffff5;
@@ -26,6 +26,6 @@
   border-radius: 5px;
 }
 
-#logo-header {
+#logo-footer {
   height: 60%;
 }
