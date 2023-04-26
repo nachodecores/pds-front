@@ -5,24 +5,24 @@ import axios from "axios";
 export default function Catalogue() {
   const [herds, setHerds] = useState([]);
 
-  console.log(process.env.REACT_APP_API_URL);
-
   useEffect(() => {
     const getHerds = async () => {
       const response = await axios({
         method: "GET",
-        url: `${process.env.REACT_APP_API_URL}/lotes`,
+        url: `http://localhost:8000/lotes`,
       });
       setHerds(response.data);
-      console.log(herds);
     };
     getHerds();
   }, []);
+  // console.log(herds);
 
   return (
     <>
       <h1>Catálogo</h1>
-      <div>{herds}</div>
+      {herds.map((herd) => {
+        <h3>Lote</h3>;
+      })}
     </>
   );
 }
