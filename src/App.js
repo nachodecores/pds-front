@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Auction from "./components/Auction";
+import Catalogue from "./components/Catalogue";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/remate" element={<Auction />} />
+        <Route path="/catalogo" element={<Catalogue />} />
       </Routes>
     </div>
   );
