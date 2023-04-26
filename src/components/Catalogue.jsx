@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import HerdCard from "./partials/HerdCard";
 
 export default function Catalogue() {
   const [herds, setHerds] = useState([]);
@@ -20,9 +21,9 @@ export default function Catalogue() {
   return (
     <>
       <h1>Catálogo</h1>
-      {herds.map((herd) => {
-        <h3>Lote</h3>;
-      })}
+      {herds.map((herd) => (
+        <HerdCard herd={herd} key={herd.id} />
+      ))}
     </>
   );
 }

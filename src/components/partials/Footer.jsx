@@ -12,7 +12,7 @@ export default function Footer() {
         alt="logo Pantall del Sur"
       ></img>
       <Link className="" to="/login">
-        LogIn
+        Admin
       </Link>
     </div>
   );
