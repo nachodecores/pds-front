@@ -1,58 +1,70 @@
 import React from "react";
 import Card from "@mui/material/Card";
-import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
-import CardActions from "@mui/material/CardActions";
-import Avatar from "@mui/material/Avatar";
-import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import { red } from "@mui/material/colors";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShareIcon from "@mui/icons-material/Share";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
+import { CardActionArea } from "@mui/material";
+import Backdrop from "@mui/material/Backdrop";
+import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
+import Fade from "@mui/material/Fade";
+import HerdCardModal from "./HerdCardModal";
+
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  boxShadow: 24,
+  p: 4,
+};
 
 export default function HerdCard({ herd }) {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <>
       <Card sx={{ maxWidth: 345 }}>
-        <CardHeader
-          avatar={
-            <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-              Esc.
-            </Avatar>
-          }
-          action={
-            <IconButton aria-label="settings">
-              <MoreVertIcon />
-            </IconButton>
-          }
-          title={`Lote: ${herd.id} - ${herd.quantity} Vacas de invernada`}
-          subheader={`Ubicación: ${herd.location}`}
-        />
-        <CardMedia
-          component="img"
-          height="194"
-          image="https://el-pais.brightspotcdn.com/dims4/default/5eb2f00/2147483647/strip/true/crop/6000x3129+0+692/resize/840x438!/quality/90/?url=https%3A%2F%2Fel-pais-uruguay-production-web.s3.amazonaws.com%2Fbrightspot%2Fbd%2Fc2%2Fb3c2813343dab933e8e098efbbca%2Fdsc-0030.JPG"
-          alt="Video del lote en cuestión"
-        />
-        <CardContent>
-          <Typography variant="body2" color="text.secondary">
-            {herd.description}
-          </Typography>
-        </CardContent>
-        <CardActions disableSpacing>
-          <IconButton aria-label="add to favorites">
-            <FavoriteIcon />
-          </IconButton>
-          <IconButton aria-label="share">
-            <ShareIcon />
-          </IconButton>
-          <IconButton aria-label="share">
-            <ShareIcon />
-          </IconButton>
-        </CardActions>
+        <CardActionArea onClick={handleOpen}>
+          <CardMedia
+            component="img"
+            height="140"
+            image="img/vacaslecheras.jpeg"
+            alt="green iguana"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              {herd.quantity} {herd.category} vacas {herd.breed}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              {herd.description}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
       </Card>
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition
+        slots={{ backdrop: Backdrop }}
+        slotProps={{
+          backdrop: {
+            timeout: 500,
+          },
+        }}
+      >
+        <Fade in={open}>
+          <Box sx={style}>
+            <HerdCardModal herd={herd} />
+          </Box>
+        </Fade>
+      </Modal>
     </>
   );
 }
