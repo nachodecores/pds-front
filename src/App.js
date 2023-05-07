@@ -16,7 +16,7 @@ export default function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/remate" element={<Auction />} />
         <Route path="/catalogo" element={<Catalogue />} />
-        <Route path="/" element={<HerdDetail />} />
+        <Route path="/catalogo/:id" element={<HerdDetail />} />
       </Routes>
     </div>
   );

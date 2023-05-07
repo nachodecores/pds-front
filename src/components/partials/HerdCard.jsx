@@ -11,7 +11,7 @@ export default function HerdCard({ herd }) {
 
   return (
     <>
-      <Link to={"/"}>
+      <Link to={`/catalogo/${herd.id}`}>
         <Card sx={{ maxWidth: 345 }}>
           <CardActionArea onClick={handleOpen}>
             <CardMedia

@@ -26,7 +26,7 @@ export default function Catalogue() {
       <Container>
         <Grid container rowSpacing={2} columnSpacing={{ xs: 1, md: 2, lg: 3 }}>
           {herds.map((herd) => (
-            <Grid item sm={12} md={6} lg={4}>
+            <Grid key={herd.id} item sm={12} md={6} lg={4}>
               <HerdCard herd={herd} key={herd.id} />
             </Grid>
           ))}
