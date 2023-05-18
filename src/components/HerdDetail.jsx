@@ -11,7 +11,7 @@ export default function BasicCard() {
       component="ul"
       sx={{ display: "flex", gap: 2, flexWrap: "wrap", p: 0, m: 0 }}
     >
-      <h1>{herd.id}</h1>
+      <h1>{}</h1>
       <Card component="li" sx={{ minWidth: 300, flexGrow: 1 }}>
         <CardCover>
           <img
