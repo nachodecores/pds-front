@@ -14,7 +14,7 @@ export default function Footer() {
       <Link className="" to="/login">
         Admin
       </Link>
-      <Link className="" to="/login">
+      <Link className="" to="/terms">
         Reglamento
       </Link>
     </div>

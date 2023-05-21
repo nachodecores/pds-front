@@ -6,6 +6,7 @@ import Signup from "./components/Signup";
 import Auction from "./components/Auction";
 import Catalogue from "./components/Catalogue";
 import HerdDetail from "./components/HerdDetail";
+import Terms from "./components/Terms";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/remate" element={<Auction />} />
         <Route path="/catalogo" element={<Catalogue />} />
         <Route path="/catalogo/:id" element={<HerdDetail />} />
+        <Route path="/terms" element={<Terms />} />
       </Routes>
     </div>
   );
