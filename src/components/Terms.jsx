@@ -1,6 +1,5 @@
 import React from "react";
 import HomeHeader from "./partials/HomeHeader";
-import Footer from "./partials/Footer";
 
 export default function Terms() {
   return (
@@ -375,7 +374,6 @@ export default function Terms() {
           </li>
         </ol>
       </div>
-      <Footer />
     </>
   );
 }

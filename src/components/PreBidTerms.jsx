@@ -1,6 +1,5 @@
 import React from "react";
 import HomeHeader from "./partials/HomeHeader";
-import Footer from "./partials/Footer";
 
 export default function PreBidTerms() {
   return (
@@ -50,7 +49,6 @@ export default function PreBidTerms() {
           </li>
         </ul>
       </div>
-      <Footer />
     </>
   );
 }
