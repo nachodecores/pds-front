@@ -4,14 +4,14 @@ import "../styles/Header.css";
 
 export default function Header() {
   return (
-    <div className="header d-flex align-items-center">
+    <div className="header d-flex">
       <img
         id="logo-header"
-        src="img/logo-pantalladelsur-claro.jpg"
+        src="img/logo-pds-entero.svg"
         type=""
         alt="logo Pantall del Sur"
       ></img>
-      <Link className="" to="/login">
+      <Link className="ms-auto" to="/login">
         LogIn
       </Link>
     </div>

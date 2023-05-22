@@ -13,35 +13,29 @@ export default function Footer() {
     <div className="footer d-flex align-items-center">
       <img
         id="logo-footer"
-        src="img/logo-pantalladelsur-claro.jpg"
+        src="img/logo-pds-letras.svg"
         type=""
         alt="logo Pantall del Sur"
       ></img>
-      <ul style={{ listStyleType: "none" }}>
-        <li>
-          <a href="https://twitter.com/home">
-            <FaTwitterSquare className="icon" />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/">
-            <FaInstagramSquare className="icon" />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com/pantalladelsur">
-            <FaFacebookSquare className="icon" />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/feed/">
-            <FaLinkedin className="icon" />
-          </a>
-        </li>
-      </ul>
-      <Link className="" to="/login">
-        Admin
-      </Link>
+
+      <div>
+        <a href="https://twitter.com/home" target="_blank">
+          <FaTwitterSquare className="icon" />
+        </a>
+
+        <a href="https://www.instagram.com/" target="_blank">
+          <FaInstagramSquare className="icon" />
+        </a>
+
+        <a href="https://www.facebook.com/pantalladelsur" target="_blank">
+          <FaFacebookSquare className="icon" />
+        </a>
+
+        <a href="https://www.linkedin.com/feed/" target="_blank">
+          <FaLinkedin className="icon" />
+        </a>
+      </div>
+
       <Link className="" to="/terms">
         Reglamento
       </Link>
