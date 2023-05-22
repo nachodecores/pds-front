@@ -9,8 +9,8 @@ export default function Hero() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="holder.js/800x400?text=First slide&bg=373940"
-            alt="First slide"
+            src="./img/vaca-lechera.jpg"
+            alt="Vaca lechera"
           />
           <Carousel.Caption>
             <h3>First slide label</h3>
@@ -20,8 +20,8 @@ export default function Hero() {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="holder.js/800x400?text=Second slide&bg=282c34"
-            alt="Second slide"
+            src="./img/vaca-carne.jpg"
+            alt="Vaca carne"
           />
 
           <Carousel.Caption>
@@ -30,11 +30,7 @@ export default function Hero() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=Third slide&bg=20232a"
-            alt="Third slide"
-          />
+          <img className="d-block w-100" src="./img/ovinos.jpg" alt="Ovinos" />
 
           <Carousel.Caption>
             <h3>Third slide label</h3>

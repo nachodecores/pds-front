@@ -17,7 +17,7 @@ export default function Footer() {
         type=""
         alt="logo Pantall del Sur"
       ></img>
-      <ul>
+      <ul style={{ listStyleType: "none" }}>
         <li>
           <FaTwitterSquare className="icon" />
         </li>
