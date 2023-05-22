@@ -12,7 +12,7 @@ export default function Catalogue() {
     const getHerds = async () => {
       const response = await axios({
         method: "GET",
-        url: `http://localhost:8000/catalogo`,
+        url: `http://localhost:8000/catalogue`,
       });
       setHerds(response.data);
     };
