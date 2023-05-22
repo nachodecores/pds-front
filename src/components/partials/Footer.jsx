@@ -19,16 +19,24 @@ export default function Footer() {
       ></img>
       <ul style={{ listStyleType: "none" }}>
         <li>
-          <FaTwitterSquare className="icon" />
+          <a href="https://twitter.com/home">
+            <FaTwitterSquare className="icon" />
+          </a>
         </li>
         <li>
-          <FaInstagramSquare className="icon" />
+          <a href="https://www.instagram.com/">
+            <FaInstagramSquare className="icon" />
+          </a>
         </li>
         <li>
-          <FaFacebookSquare className="icon" />
+          <a href="https://www.facebook.com/pantalladelsur">
+            <FaFacebookSquare className="icon" />
+          </a>
         </li>
         <li>
-          <FaLinkedin className="icon" />
+          <a href="https://www.linkedin.com/feed/">
+            <FaLinkedin className="icon" />
+          </a>
         </li>
       </ul>
       <Link className="" to="/login">
