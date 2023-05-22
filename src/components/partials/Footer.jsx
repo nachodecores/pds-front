@@ -1,6 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/Footer.css";
+import {
+  FaFacebookSquare,
+  FaInstagramSquare,
+  FaLinkedin,
+  FaTwitterSquare,
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -11,6 +17,20 @@ export default function Footer() {
         type=""
         alt="logo Pantall del Sur"
       ></img>
+      <ul>
+        <li>
+          <FaTwitterSquare className="icon" />
+        </li>
+        <li>
+          <FaInstagramSquare className="icon" />
+        </li>
+        <li>
+          <FaFacebookSquare className="icon" />
+        </li>
+        <li>
+          <FaLinkedin className="icon" />
+        </li>
+      </ul>
       <Link className="" to="/login">
         Admin
       </Link>

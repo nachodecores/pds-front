@@ -8,7 +8,7 @@ export default function Terms() {
       <div>
         <h1>Reglamento</h1>
         <h2>Reglamento del remate de vacunos</h2>
-        <ol>
+        <ul>
           <li>
             Art. 1º.- Vacunos: La cantidad mínima de cabezas por lote será de
             10, luego de inspeccionado, excepto en ganado lechero, en los que se
@@ -117,9 +117,9 @@ export default function Terms() {
             tendrá un descuento del 0,67% mensual otorgado por el vendedor,
             quien está obligado a aceptar tal operación.-
           </li>
-        </ol>
+        </ul>
         <h2>Reglamento del remate de lanares</h2>
-        <ol>
+        <ul>
           <li>
             Art. 1º.- Lotes: El tamaño mínimo de los lotes será de 10 cabezas.-
           </li>
@@ -182,9 +182,9 @@ export default function Terms() {
             otorgado por el vendedor, quien esta obligado a aceptar la
             operación.-
           </li>
-        </ol>
+        </ul>
         <h2>Reglamento del remate de equinos</h2>
-        <ol>
+        <ul>
           <li>
             Art. 1º .-.- No habrá limitaciones para el tamaño de los lotes.-
           </li>
@@ -207,7 +207,7 @@ export default function Terms() {
             aprobados por los inspectores designados por PANTALLA DEL SUR. ( Dr.
             Heber Sellanes y Dr. Germán Álvarez ) .- Los lotes podrán ser
             revisados por los promitentes compradores antes del día del remate,
-            no dando lugar a reclamos una vez bajado el martillo.-{" "}
+            no dando lugar a reclamos una vez bajado el martillo.-
           </li>
           <li>
             Art. 5º.- Forma de comercialización .- Los equinos se
@@ -217,9 +217,9 @@ export default function Terms() {
             Art. 6º .- Los gastos del vendedor serán del 7 % mas impuestos, y
             los gastos del comprador serán del 8 % mas impuestos.-
           </li>
-        </ol>
+        </ul>
         <h2>Reglamento remate de maquinaria y herramientas</h2>
-        <ol>
+        <ul>
           <li>
             Las mismas serán subastadas a la vista y/o con el informe de su
             estado actual proporcionado de buena fe por el vendedor, no dando
@@ -230,22 +230,22 @@ export default function Terms() {
           <li>Gastos:</li>
           <li>Tabla</li>
           <li>
-            Plazo para retirar : 10 días a partir de la fecha del remate, previo
+            Plazo para retirar: 10 días a partir de la fecha del remate, previo
             pago ó documentación.-
           </li>
           <li>
-            ¡ Muy importante ¡! : En las operaciones realizadas con plazo, el
-            comprador deberá integrar al contado las comisiones e impuestos.-{" "}
+            ¡ Muy importante !: En las operaciones realizadas con plazo, el
+            comprador deberá integrar al contado las comisiones e impuestos.-
           </li>
-        </ol>
-        <h1>Consideracones generales</h1>
-        <ol>
+        </ul>
+        <h2>Consideracones generales</h2>
+        <ul>
           <li>
             A . - Referente a los lotes inscriptos.- Los lotes podrán ser
             retirados de la venta hasta 15 días antes del remate.- En el caso
             que el lote sea retirado luego que fue inspeccionado, el vendedor
             deberá cubrir los gastos de inspección.- Los mismos ascenderán a U$S
-            100 más U$S 2 por animal inspeccionado.-{" "}
+            100 más U$S 2 por animal inspeccionado.-
           </li>
           <li>
             A .1. - El lote presentado a la venta con base de precios impuesta
@@ -254,12 +254,12 @@ export default function Terms() {
             más U$S 2 por animal inspeccionado al vendedor.-
           </li>
           <li>
-            A. 2 .- La información difundida en el catálogo sobre las
-            condiciones de un lote podrá ser rectificada por el rematador al
-            momento de comenzar la subasta del mismo, reputándose esta
-            rectificación como modificativa del catálogo y conocida por los
-            concurrentes, contribuyendo a salvar eventuales errores de
-            compaginación e impresión.-{" "}
+            A. 2.- La información difundida en el catálogo sobre las condiciones
+            de un lote podrá ser rectificada por el rematador al momento de
+            comenzar la subasta del mismo, reputándose esta rectificación como
+            modificativa del catálogo y conocida por los concurrentes,
+            contribuyendo a salvar eventuales errores de compaginación e
+            impresión.-
           </li>
           <li>
             B .- Referente al retiro de los lotes vendidos .- La entrega de los
@@ -269,24 +269,24 @@ export default function Terms() {
             vendedor en condiciones de entregar los animales en tales plazos.-
           </li>
           <li>
-            B . 1 .- El plazo de entrega de los animales podrá extenderse el
+            B. 1 .- El plazo de entrega de los animales podrá extenderse el
             mínimo posible y exclusivamente por razones de fuerza mayor (
             razones sanitarias que afecten al establecimiento en forma
             indirecta, inundaciones, paro de transportistas etc. ….).-
           </li>
           <li>
-            B . 2 .- El flete del retiro de los animales será de cargo del
+            B. 2.- El flete del retiro de los animales será de cargo del
             comprador, en tanto no exista otro acuerdo suscrito entre las
             partes, efectuando la tara del camión vacío antes de la carga.-
           </li>
           <li>
-            C . - Referente a los Riesgos: en casos de muerte, accidentes que
+            C. - Referente a los Riesgos: en casos de muerte, accidentes que
             perjudiquen la salud de los animales o hurto, el vendedor asume las
             pérdidas en tanto no venza el plazo estipulado para el retiro de los
             mismos.-
           </li>
           <li>
-            D .- REFERENTE A LA PARTE ADMINISTRATIVA .- La administración estará
+            D.- REFERENTE A LA PARTE ADMINISTRATIVA .- La administración estará
             a cargo de PANTALLA DEL SUR.- Las ventas se realizarán al contado y
             en dólares americanos.- En caso que los vendedores otorguen plazo,
             las condiciones estarán debidamente especificadas en el catálogo
@@ -300,7 +300,7 @@ export default function Terms() {
             con un plazo máximo de 45 días corridos, cheques certificados,
             letras de cambio, cartas de crédito de cualquier Banco de la plaza
             financiera u otras modalidades de pago con garantías suficientes y
-            cuyo plazo no exceda las condiciones impuestas por el vendedor.-{" "}
+            cuyo plazo no exceda las condiciones impuestas por el vendedor.-
           </li>
           <li>
             D . 2 .- Las operaciones de compras, deberán documentarse el mismo
@@ -311,14 +311,14 @@ export default function Terms() {
             multiplicar los kilos informados en el catálogo por el precio de
             bajada de martillo, ( animales vendidos al kilo ), más comisiones e
             impuestos, resultando esto último en una liquidación provisoria, sin
-            perjuicio del otorgamiento de los recibos correspondientes.-{" "}
+            perjuicio del otorgamiento de los recibos correspondientes.-
           </li>
           <li>
             D. 3 .- Al momento del retiro de la hacienda y una vez pesada la
             misma, se hará la liquidación definitiva, obligándose el comprador a
             abonar o documentar en el acto el saldo deudor restante, y los
             escritorios integrantes de PANTALLA DEL SUR a abonar o documentar en
-            el acto el saldo acreedor según sea el caso.-{" "}
+            el acto el saldo acreedor según sea el caso.-
           </li>
           <li>
             D . 4 .- Los honorarios por concepto de sanidad y/o diagnóstico de
@@ -339,7 +339,7 @@ export default function Terms() {
             DGI.-
           </li>
           <li>
-            De igual forma se procederá – será sin cargo para el vendedor
+            De igual forma se procederá - será sin cargo para el vendedor
             -respecto de cualquier otro gasto y/o costo que sea consecuencia del
             destino que el comprador le dará a los animales, o de su giro
             comercial.-
@@ -354,25 +354,24 @@ export default function Terms() {
             días antes de la fecha del remate.-
           </li>
           <li>
-            E . 1. Los compradores deberán tener al momento de operar todos sus
+            E. 1. Los compradores deberán tener al momento de operar todos sus
             datos personales (nº de DI.CO.SE. , razón social, dirección y
             teléfonos de contacto etc. ), a los efectos de agilizar la
             operativa.-
           </li>
           <li>
-            F .- IMPORTANTE : Los lotes no vendidos en el remate PANTALLA DEL
-            SUR quedarán en venta particular por 15 días corridos en los
-            escritorios a quienes fueron consignados, rigiendo las mismas
-            condiciones en que fueron anotados y supeditado a lo establecido en
-            este reglamento.-{" "}
+            F.- IMPORTANTE : Los lotes no vendidos en el remate PANTALLA DEL SUR
+            quedarán en venta particular por 15 días corridos en los escritorios
+            a quienes fueron consignados, rigiendo las mismas condiciones en que
+            fueron anotados y supeditado a lo establecido en este reglamento.-
           </li>
           <li>
-            G .-.- Los formularios de inscripción podrán ser retirados en las
+            G.- Los formularios de inscripción podrán ser retirados en las
             oficinas de los escritorios intervinientes en PANTALLA DEL SUR , o
             en su defecto por correo electrónico (pantalladelsur@hotmail.com
             )..-
           </li>
-        </ol>
+        </ul>
       </div>
     </>
   );
