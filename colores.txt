@@ -1,0 +1,6 @@
+Azul #0e4056
+Gris #bfc8c9
+Crema #fffff5
+Marrón claro #947f6f
+Marrón medio #210608
+Marrón oscuro #10010b
