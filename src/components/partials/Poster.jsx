@@ -8,16 +8,16 @@ export default function Poster() {
     <div className="poster">
       <Link to="/remate">Remate en vivo</Link>
 
-      <Card className="container m-5">
-        <Card.Header>Próximo Remate</Card.Header>
+      <div className="card container m-5">
+        <h3>Próximo Remate</h3>
         <Card.Body>
-          <Card.Title>MARTES 28 DE AGOSTO</Card.Title>
+          <h2>MARTES 28 DE AGOSTO</h2>
           <Card.Text>Local de feria de Juan Soler</Card.Text>
           <Link to="/catalogo">
-            <Button variant="primary">Ver Catálogo</Button>
+            <Button>Ver Catálogo</Button>
           </Link>
         </Card.Body>
-      </Card>
+      </div>
     </div>
   );
 }

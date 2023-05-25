@@ -5,7 +5,7 @@ import "../styles/Hero.css";
 export default function Hero() {
   return (
     <div className="hero">
-      <Carousel controls={true} indicators={false}>
+      <Carousel controls={false} indicators={false}>
         <Carousel.Item>
           <div
             className="image-container"

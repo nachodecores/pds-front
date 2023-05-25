@@ -17,7 +17,7 @@ export default function HerdCard({ herd }) {
           <div className="card-meta">Villa Rodríguez, San José</div>
           <div className="card-footer">
             <Link to="/catalogo">
-              <Button variant="primary">Ver Catálogo</Button>
+              <Button variant="primary">Más Información</Button>
             </Link>
             <button className="icon-button">
               <svg

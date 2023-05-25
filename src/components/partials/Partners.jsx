@@ -16,25 +16,28 @@ export default function Partners() {
     };
     getAuctioneers();
   }, []);
-  console.log(auctioneers);
 
   return (
     <>
-      <h2>Escritorios</h2>
+      <h2>Escritorios Participantes</h2>
       <div style={{ display: "flex" }}>
         {auctioneers.map((auctioneer) => {
           return (
-            <Card style={{ width: "18rem" }}>
+            <div
+              className="card"
+              style={{ width: "18rem", color: "#0e4056", margin: "10px" }}
+            >
               <Card.Body>
-                <img src={`./img/${auctioneer.logo}`} alt="" />
-                <Card.Title>
-                  {" "}
-                  <strong> {auctioneer.name}</strong>
-                </Card.Title>
-                <Card.Title>{auctioneer.phone}</Card.Title>
-                <Card.Text>{auctioneer.address}</Card.Text>
+                <img
+                  src={`./img/${auctioneer.logo}`}
+                  alt={`logo de ${auctioneer.name}`}
+                  style={{ height: "10vh" }}
+                />
+                <h4>{auctioneer.name}</h4>
+                <h3>{auctioneer.phone}</h3>
+                <p>{auctioneer.address}</p>
               </Card.Body>
-            </Card>
+            </div>
           );
         })}
       </div>
