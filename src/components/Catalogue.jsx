@@ -1,9 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Header from "./partials/HomeHeader";
 import HerdCard from "./partials/HerdCard";
-import Grid from "@mui/material/Grid";
-import Container from "@mui/material/Container";
+import "./styles/Catalogue.css";
 
 export default function Catalogue() {
   const [herds, setHerds] = useState([]);
@@ -18,20 +18,20 @@ export default function Catalogue() {
     };
     getHerds();
   }, []);
-  // console.log(herds);
 
   return (
     <>
-      <h1>Catálogo</h1>
-      <Container>
-        <Grid container rowSpacing={2} columnSpacing={{ xs: 1, md: 2, lg: 3 }}>
+      <Header />
+      <h1>Catálogo del Remate #14</h1>
+      <main>
+        <section className="cards">
           {herds.map((herd) => (
-            <Grid key={herd.id} item sm={12} md={6} lg={4}>
-              <HerdCard herd={herd} key={herd.id} />
-            </Grid>
+            <div className="card" key={herd.id}>
+              <HerdCard herd={herd} />
+            </div>
           ))}
-        </Grid>
-      </Container>
+        </section>
+      </main>
     </>
   );
 }
