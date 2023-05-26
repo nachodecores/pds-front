@@ -9,7 +9,7 @@ export default function Welcome() {
     zIndex: "5",
     height: "100vh",
     width: "100vw",
-    backgroundColor: "rgba(255, 255, 245, 0.75)",
+    backgroundColor: "rgba(255, 255, 245, 1)",
     display: `${unveil}`,
     justifyContent: "center",
     alignItems: "center",
