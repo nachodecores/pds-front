@@ -33,6 +33,8 @@ export default function HerdDetail() {
     setExpanded(!expanded);
   };
 
+  // Llamada axios para traer por id datos del lote clickeado
+
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
