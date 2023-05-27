@@ -2,22 +2,29 @@
   background-color: #fffff5;
   border-radius: 15px;
   overflow: hidden;
-  padding: 1.25rem;
+  padding: 0.5rem;
   position: relative;
   transition: 0.15s ease-in;
 }
 
 .card:hover {
-  box-shadow: 0 0 0 2px #bfc8c9, 0 10px 60px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 4px #bfc8c9, 0 10px 60px 0 rgba(0, 0, 0, 0.1);
 }
 
 .card-image {
+  min-height: calc(width/2);
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding-top: 45%;
+  background-image: url("/public/img/vacaslecheras.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .card-header {
-  margin-top: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -59,7 +66,9 @@
 }
 
 .card-meta {
+  font-size: 0.5rem;
   display: flex;
+  justify-content: center;
   align-items: center;
   color: #787878;
 }

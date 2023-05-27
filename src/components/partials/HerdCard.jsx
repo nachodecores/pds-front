@@ -8,12 +8,14 @@ export default function HerdCard({ herd }) {
     <>
       <article>
         <figure className="card-image">
-          <img src="img/vacaslecheras.jpeg" alt="Video del lote" />
+          {/* <img src="img/vacaslecheras.jpeg" alt="Video del lote" /> */}
         </figure>
         <div className="card-header">
           {herd.quantity} {herd.category} vacas {herd.breed}
         </div>
-        <div className="card-meta">Villa Rodríguez, San José</div>
+        <div className="card-meta">
+          <p> Villa Rodríguez, San José</p>
+        </div>
         <div className="card-footer">
           <Link to={`/catalogo/${herd.id}`}>
             <Button variant="primary">Más Información</Button>
