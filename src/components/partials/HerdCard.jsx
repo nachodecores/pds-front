@@ -1,20 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import { SlLocationPin } from "react-icons/sl";
 import "../styles/HerdCard.css";
 
 export default function HerdCard({ herd }) {
   return (
     <>
       <article>
-        <figure className="card-image">
-          {/* <img src="img/vacaslecheras.jpeg" alt="Video del lote" /> */}
-        </figure>
+        <figure className="card-image"></figure>
         <div className="card-header">
-          {herd.quantity} {herd.category} vacas {herd.breed}
-        </div>
-        <div className="card-meta">
-          <p> Villa Rodríguez, San José</p>
+          <h3>
+            {herd.quantity} {herd.category} vacas {herd.breed}
+          </h3>
+          <p>
+            {" "}
+            <SlLocationPin /> Villa Rodríguez, San José
+          </p>
         </div>
         <div className="card-footer">
           <Link to={`/catalogo/${herd.id}`}>

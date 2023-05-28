@@ -1,4 +1,5 @@
 import * as React from "react";
+import "./styles/HerdDetail.css";
 import { styled } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
@@ -36,7 +37,7 @@ export default function HerdDetail() {
   // Llamada axios para traer por id datos del lote clickeado
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card className="herd-detail-card">
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -54,8 +55,8 @@ export default function HerdDetail() {
       <CardMedia
         component="img"
         height="194"
-        image="/static/images/cards/paella.jpg"
-        alt="Paella dish"
+        image="/img/vacaslecheras.jpeg"
+        alt={`video del lote herd.id`}
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
