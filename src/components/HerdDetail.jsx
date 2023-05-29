@@ -1,20 +1,20 @@
 import * as React from "react";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
+
 import "./styles/HerdDetail.css";
 import { styled } from "@mui/material/styles";
 import Card from "@mui/material/Card";
-import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import Collapse from "@mui/material/Collapse";
-import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import { red } from "@mui/material/colors";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -28,31 +28,71 @@ const ExpandMore = styled((props) => {
 }));
 
 export default function HerdDetail() {
-  const [expanded, setExpanded] = React.useState(false);
+  const [herd, setHerd] = useState({});
+  const [auctioneers, setAuctioneers] = useState([]);
+  const { id } = useParams();
 
+  const [expanded, setExpanded] = React.useState(false);
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
+  console.log(id);
 
   // Llamada axios para traer por id datos del lote clickeado
 
+  useEffect(() => {
+    const getHerd = async () => {
+      const response = await axios({
+        method: "GET",
+        url: `http://localhost:8000/catalogue/${id}`,
+      });
+      console.log(response.data);
+      setHerd(response.data);
+    };
+    getHerd();
+
+    //Llamada para traer únicamente el auctioneer del herd seleccionado. Innecesario traerlos a todos. La llamada tiene que encontrar al escritorio por la FK de auctioneer del herd.
+
+    // const getAuctioneers = async () => {
+    //   const response = await axios({
+    //     method: "GET",
+    //     url: `http://localhost:8000/auctioneers`,
+    //   });
+    //   setAuctioneers(response.data);
+    // };
+
+    // getAuctioneers();
+  }, []);
+
   return (
     <Card className="herd-detail-card">
-      <div className="header"></div>
-      <CardHeader
-        avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
-          </Avatar>
-        }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
-      />
+      <div className="herd-detail-card-header">
+        <div className="left-side">
+          <img src={`./img/${auctioneers.logo}`} alt="" />
+          <div>
+            <h1>
+              {herd.quantity} vacas de invernada {herd.breed}
+            </h1>
+            <h4>Villa Rodríguez, San José</h4>
+          </div>
+        </div>
+        <button className="icon-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            display="block"
+            id="Heart"
+          >
+            <path d="M7 3C4.239 3 2 5.216 2 7.95c0 2.207.875 7.445 9.488 12.74a.985.985 0 0 0 1.024 0C21.125 15.395 22 10.157 22 7.95 22 5.216 19.761 3 17 3s-5 3-5 3-2.239-3-5-3z" />
+          </svg>
+        </button>
+      </div>
+
       <CardMedia
         component="img"
         height="194"

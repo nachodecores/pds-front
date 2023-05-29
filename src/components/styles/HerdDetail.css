@@ -1,5 +1,16 @@
 .herd-detail-card {
+  background-color: #fffff5;
   width: 90%;
   margin: auto;
   margin-top: 15vh;
+}
+
+.herd-detail-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left-side {
+  display: flex;
 }

@@ -26,6 +26,7 @@ export default function Partners() {
             <div
               className="card"
               style={{ width: "18rem", color: "#0e4056", margin: "10px" }}
+              key={auctioneer.id}
             >
               <Card.Body>
                 <img
