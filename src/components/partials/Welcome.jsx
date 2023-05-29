@@ -1,27 +1,20 @@
 import React from "react";
 import { useState } from "react";
+import "../styles/Welcome.css";
 
 export default function Welcome() {
-  const [unveil, setUnveil] = useState("flex");
-
-  let styles = {
-    position: "fixed",
-    zIndex: "5",
-    height: "100vh",
-    width: "100vw",
-    backgroundColor: "rgba(255, 255, 245, 1)",
-    display: `${unveil}`,
-    justifyContent: "center",
-    alignItems: "center",
-  };
+  const [fadeOut, setFadeOut] = useState(false);
 
   function handleWelcome() {
-    setUnveil("none");
+    setFadeOut(true);
   }
 
   return (
     <>
-      <div onClick={() => handleWelcome()} style={styles}>
+      <div
+        onClick={() => handleWelcome()}
+        className={`${fadeOut ? "fade-out" : ""} your-div`}
+      >
         <svg
           width="60vw"
           viewBox="0 0 589 126"

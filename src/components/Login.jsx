@@ -4,7 +4,7 @@ const Login = () => {
   return (
     <>
       <section className="vh-100" style={{ backgroundColor: "#0e4056" }}>
-        <div className="container py-5 h-100">
+        <div className="container py-5 h-50">
           <div className="row d-flex justify-content-center align-items-center h-100">
             <div className="col col-xl-10">
               <div className="card">

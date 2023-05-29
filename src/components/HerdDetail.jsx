@@ -38,6 +38,7 @@ export default function HerdDetail() {
 
   return (
     <Card className="herd-detail-card">
+      <div className="header"></div>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
