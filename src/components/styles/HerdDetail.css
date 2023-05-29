@@ -1,16 +1,34 @@
 .herd-detail-card {
   background-color: #fffff5;
-  width: 90%;
+  width: 75%;
   margin: auto;
-  margin-top: 15vh;
 }
 
 .herd-detail-card-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 15px;
 }
 
 .left-side {
   display: flex;
+  align-items: center;
+}
+
+.logo-auctioneer {
+  height: 40px;
+}
+
+.card-media {
+  background-image: url("/public/img/vacaslecheras.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
+}
+
+.ratings {
+  display: flex;
+  justify-content: space-evenly;
 }
