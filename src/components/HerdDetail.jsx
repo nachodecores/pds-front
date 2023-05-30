@@ -9,7 +9,6 @@ import SquareRoundedIcon from "@mui/icons-material/SquareRounded";
 import Rating from "@mui/material/Rating";
 import "./styles/HerdDetail.css";
 import { styled } from "@mui/material/styles";
-import Card from "@mui/material/Card";
 
 function handlePreBid() {
   alert("Lógica de las preofertas");
@@ -57,7 +56,7 @@ export default function HerdDetail() {
     <>
       <Header />
       <div className="container">
-        <div className="herd-detail-card card">
+        <div className="herd-detail-card">
           <div className="herd-detail-card-header">
             <div className="left-side">
               <img
@@ -66,9 +65,7 @@ export default function HerdDetail() {
                 className="logo-auctioneer"
               />
               <div>
-                <h1>
-                  {herd.quantity} vacas de invernada {herd.breed}
-                </h1>
+                <h1>vacas de invernada {herd.breed}</h1>
               </div>
             </div>
             <button className="icon-button">
@@ -100,6 +97,7 @@ export default function HerdDetail() {
 
         <div className="details">
           <div className="values card">
+            <h4>Cantidad: {herd.quantity}</h4>
             <h4>Peso estimado: 160 kg</h4>
             <h4>Precio: 2.15 U$S/kg</h4>
           </div>

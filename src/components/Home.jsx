@@ -2,7 +2,7 @@ import React from "react";
 import HomeHeader from "./partials/HomeHeader";
 import Hero from "./partials/Hero";
 import Poster from "./partials/Poster";
-import Partners from "./partials/Partners";
+import Auctioneers from "./partials/Auctioneers";
 import Footer from "./partials/Footer";
 import Welcome from "./partials/Welcome";
 
@@ -15,7 +15,7 @@ export default function Home() {
       <HomeHeader />
       <Hero />
       <Poster />
-      <Partners />
+      <Auctioneers />
       <Footer />
     </div>
   );
