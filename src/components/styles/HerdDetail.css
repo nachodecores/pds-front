@@ -1,7 +1,8 @@
 .herd-detail-card {
   background-color: #fffff5;
-  width: 75%;
+  width: 100%;
   margin: auto;
+  color: #0e4056;
 }
 
 .herd-detail-card-header {
@@ -28,7 +29,15 @@
   height: 50vh;
 }
 
-.ratings {
+.details {
   display: flex;
   justify-content: space-evenly;
+  color: #0e4056;
+}
+.seller {
+  display: flex;
+  justify-content: space-around;
+}
+.prebid {
+  display: flex;
 }

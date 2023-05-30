@@ -1,4 +1,9 @@
 .poster {
   height: 50vh;
   color: #0e4056;
+  background-color: #fffff5;
+}
+
+.card {
+  background-color: #0e4056;
 }
