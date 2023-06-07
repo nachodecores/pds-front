@@ -17,6 +17,7 @@ export default function Catalogue() {
       setHerds(response.data);
     };
     getHerds();
+    console.log(herds);
   }, []);
 
   return (
