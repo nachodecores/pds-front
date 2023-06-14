@@ -7,8 +7,8 @@ import { Button } from "react-bootstrap";
 import CropSquareRoundedIcon from "@mui/icons-material/CropSquareRounded";
 import SquareRoundedIcon from "@mui/icons-material/SquareRounded";
 import Rating from "@mui/material/Rating";
-import "./styles/HerdDetail.css";
 import { styled } from "@mui/material/styles";
+import "./styles/HerdDetail.css";
 
 function handlePreBid() {
   alert("Lógica de las preofertas");
@@ -16,7 +16,8 @@ function handlePreBid() {
 
 export default function HerdDetail() {
   const [herd, setHerd] = useState({});
-  const [auctioneer, setAuctioneer] = useState([]);
+  const [auctioneer, setAuctioneer] = useState({});
+  const [user, setUser] = useState();
   const { id } = useParams();
 
   const StyledRating = styled(Rating)({
@@ -37,20 +38,33 @@ export default function HerdDetail() {
       setHerd(response.data);
     };
     getHerd();
+  }, [id]);
 
-    //Llamada para traer únicamente el auctioneer del herd seleccionado. Innecesario traerlos a todos. La llamada tiene que encontrar al escritorio por la FK de auctioneer del herd.
-
+  useEffect(() => {
     const getAuctioneer = async () => {
       const response = await axios({
         method: "GET",
-        url: `http://localhost:8000/auctioneers/3`,
+        url: `http://localhost:8000/auctioneers/${herd.auctioneerId}`,
       });
-      console.log(response.data);
       setAuctioneer(response.data);
     };
+    if (herd.auctioneerId) {
+      getAuctioneer();
+    }
+  }, [herd.auctioneerId]);
 
-    getAuctioneer();
-  }, []);
+  useEffect(() => {
+    const getUser = async () => {
+      const response = await axios({
+        method: "GET",
+        url: `http://localhost:8000/users/${herd.userId}`,
+      });
+      setUser(response.data);
+    };
+    if (herd.userId) {
+      getUser();
+    }
+  }, [herd.userId]);
 
   return (
     <>
@@ -91,22 +105,22 @@ export default function HerdDetail() {
         </div>
 
         <div className="seller">
-          <h3>Vendedor: Ignacio de Cores</h3>
-          <h3>Ubicación: Villa Rodríguez, San José</h3>
+          {/* <h3>Vendedor: {`${user.firstname} ${user.lastname}`} </h3>
+          <h3>Ubicación: user.location, user.department</h3> */}
         </div>
 
         <div className="details">
           <div className="values card">
             <h4>Cantidad: {herd.quantity}</h4>
-            <h4>Peso estimado: 160 kg</h4>
-            <h4>Precio: 2.15 U$S/kg</h4>
+            <h4>Peso estimado: {herd.weight} kg</h4>
+            <h4>Precio: {herd.originalPrice} U$S/kg</h4>
           </div>
           <div className="ratings card">
             <div className="class-type d-flex">
               <h4>CLASE</h4>
               <StyledRating
                 name="customized-color"
-                defaultValue={0}
+                defaultValue={herd.classType}
                 precision={1}
                 icon={<SquareRoundedIcon fontSize="inherit" />}
                 emptyIcon={<CropSquareRoundedIcon fontSize="inherit" />}
@@ -116,7 +130,7 @@ export default function HerdDetail() {
               <h4>ESTADO</h4>
               <StyledRating
                 name="customized-color"
-                defaultValue={0}
+                defaultValue={herd.state}
                 precision={1}
                 icon={<SquareRoundedIcon fontSize="inherit" />}
                 emptyIcon={<CropSquareRoundedIcon fontSize="inherit" />}

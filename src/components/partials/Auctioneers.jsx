@@ -20,7 +20,7 @@ export default function Partners() {
   return (
     <>
       <h2>Escritorios Participantes</h2>
-      <div style={{ display: "flex" }}>
+      <div className="container" style={{ display: "flex" }}>
         {auctioneers.map((auctioneer) => {
           return (
             <div
@@ -32,7 +32,7 @@ export default function Partners() {
                 <img
                   src={`./img/${auctioneer.logo}`}
                   alt={`logo de ${auctioneer.name}`}
-                  style={{ height: "10vh" }}
+                  style={{ height: "10vh", width: "10vw" }}
                 />
                 <h4>{auctioneer.name}</h4>
                 <h3>{auctioneer.phone}</h3>
