@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Form, Button, FloatingLabel, Col, Row } from "react-bootstrap";
-import "./styles/Login.css";
+import "./styles/Signup.css";
 // import axios from "axios";
 
 export default function Signup() {
   return (
-    <>
+    <div className="signup-form">
       <Link to="/">Home</Link>
       <h1>Sign Up</h1>
       <Form className="container">
@@ -149,6 +149,6 @@ export default function Signup() {
           Registrarse
         </Button>
       </Form>
-    </>
+    </div>
   );
 }
